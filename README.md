@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# Typescript/React Quiz Game
+Small quiz game using Typescript, React and OpenTDB Quiz API
+The app is deployed at Netlify, please click [HERE](https://gracious-roentgen-0cc2f6.netlify.app)
+
+## Preview
+![“Screenshot”](https://github.com/matichmike/TypescriptReactQuiz/blob/master/src/images/screen.png?raw=true)
+<br/>
+<br/>
+
+## Setup 
+* Clone or Copy the repository
+* npm install
+* npm start
+* run http://localhost:3000/ in browser
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
