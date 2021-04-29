@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import QuestionCard from './components/QuestionCard';
 import {fetchQuizQuestions} from './API';
 import {Difficulty, QuestionState} from './API';
+import {GlobalStyle, Wrapper} from './App.styles';
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -61,14 +62,16 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>React Quiz</h1>
+    <>
+    <GlobalStyle />
+    <Wrapper>
+      <h1>Typescript React Quiz</h1>
       {gameOver || userAnswers.length === Total_Questions ? (
         <button className="start" onClick={startTrivia}>
         Start
       </button>
       ) : null}
-      {!gameOver ? <p className="score">Score:</p> : null}
+      {!gameOver ? <p className="score">Score: {score}</p> : null}
       {loading ? <p>Loading Questions...</p> : null}
       {!loading && !gameOver && (
         <QuestionCard 
@@ -88,7 +91,8 @@ function App() {
       ) : null
     }
       
-    </div>
+    </Wrapper>
+    </>
   );
 }
 
